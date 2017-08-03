@@ -1,35 +1,18 @@
 import React, { Component } from 'react';
+import Header from './components/Header';
+import AddArticle from './components/AddArticle';
+import UpdateArticle from './components/UpdateArticle';
 import './App.css';
 
 export default class App extends Component {
   render() {
     return (
       <div className="container">
-        <div className="page-header">
-          <h1>App with React and Redux</h1>
-        </div>
+        <Header />
         <div className="row">
           <div className="col-md-4">
-            <form>
-              <h3>Add Article</h3>
-              <div className="form-group">
-                <label for="textTitle">Title</label>
-                <input type="text" className="form-control" id="textTitle" />
-                <label for="textDescription">Description</label>
-                <textarea className="form-control" rows="10" id="textDescription"></textarea>
-              </div>
-              <button type="submit" className="btn btn-success">Save</button>
-            </form>
-            <form>
-              <h3>Update Article</h3>
-              <div className="form-group">
-                <label for="textTitle">Title</label>
-                <input type="text" className="form-control" id="textTitle" />
-                <label for="textDescription">Description</label>
-                <textarea className="form-control" rows="10" id="textDescription"></textarea>
-              </div>
-              <button type="submit" className="btn btn-success">Save</button>
-            </form>
+            <AddArticle />
+            <UpdateArticle />
           </div>
           <div className="col-md-8">
             <div>
