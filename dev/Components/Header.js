@@ -5,7 +5,7 @@ class Header extends Component {
     return (
       <div className="page-header">
         <h1>App with React and Redux</h1>
-      </div>
+      </div>        
     );
   }
 }
