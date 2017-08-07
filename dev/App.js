@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Header from './components/Header';
 import AddArticle from './components/AddArticle';
 import UpdateArticle from './components/UpdateArticle';
-import Visualcomp from './Components/Visualcomp';
+import ArticlesList from './Components/ArticlesList';
 import './App.css';
 
 export default class App extends Component {
@@ -17,7 +17,7 @@ export default class App extends Component {
 
           </div>
           <div className="col-md-8">
-  <Visualcomp />
+            <ArticlesList />
           </div>
         </div>
       </div>
