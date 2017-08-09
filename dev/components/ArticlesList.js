@@ -3,8 +3,13 @@ import React, { Component } from 'react';
 class ArticlesList extends Component {
   render() {
     return(
+
+    
+        <div className="col-md-4">
+
       <div>
       <div>
+
   <h3>Articol 1</h3>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
      et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -26,7 +31,10 @@ class ArticlesList extends Component {
   <button className="btn btn-info" type="submit">Update</button>
   <button type="button" className="btn btn-danger">Delete</button>
 </div>
+
+
 </div>
+
 );
 }
 }
