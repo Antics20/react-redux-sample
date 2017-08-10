@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
-import AddArticle from './components/AddArticle';
 import UpdateArticle from './components/UpdateArticle';
 import ArticlesList from './components/ArticlesList';
+import AddNewArticle from './containers/AddArticle';
 import './App.css';
 
 export default class App extends Component {
@@ -12,9 +12,8 @@ export default class App extends Component {
         <Header />
         <div className="row">
           <div className="col-md-4">
-            <AddArticle />
+            <AddNewArticle />
             <UpdateArticle />
-
           </div>
           <div className="col-md-8">
             <ArticlesList />
