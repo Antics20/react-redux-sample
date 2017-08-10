@@ -1,3 +1,5 @@
+export const ADD_ARTICLE = 'ADD_ARTICLE';
+
 //add Article
 export function addArticle(title, description) {
     return {
