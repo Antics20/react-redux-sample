@@ -9,15 +9,12 @@ class ArticlesApi {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(article)
+        }).then(
+            response => response.json(),
+            error => console.log('An error occured.', error)
+        ).then(json => {
+            return json;
         })
-            .then(
-                response => response.json(),
-                error => console.log('An error occured.', error)
-            )
-            .then(json => {
-                return json;
-            }
-        )
     }
 }
 
