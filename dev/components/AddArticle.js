@@ -16,7 +16,7 @@ class AddArticle extends Component {
           <textarea className="form-control" rows="10" id="textDescription" ref={node => { description = node}}></textarea>
         </div>
         <a onClick={ () => {
-            this.props.addArticle(title.value, description.value);
+            this.props.addArticle({title: title.value, description: description.value});
             title.value = '';
             description.value = '';
         }} className="btn btn-success">Save</a>

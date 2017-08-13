@@ -5,10 +5,7 @@ const articles = (state = [], action) => {
         case 'ADD_ARTICLE':
             return [
                 ...state,
-                {
-                    title: action.title,
-                    description: action.description
-                }
+                action.payload
             ]
         default:
             return state
