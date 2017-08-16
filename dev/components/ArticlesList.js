@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import ArticlesApi from '../api/ArticlesApi';
+import AddArticle from './AddArticle';
+import { Link } from 'react-router';
 
 class ArticlesList extends Component {
     render() {
@@ -26,10 +29,15 @@ class ArticlesList extends Component {
                     <button className="btn btn-info" type="submit">Update</button>
                     <button type="button" className="btn btn-danger">Delete</button>
                 </div>
+                <div>
+                AddArticle.map(articles=>
+                  <Link to ={'/components'+article.id}>{article.title}</Link>)
+
+</div>
+
             </div>
         );
     }
 }
 
 export default ArticlesList;
-
