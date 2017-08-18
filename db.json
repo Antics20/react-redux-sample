@@ -14,6 +14,16 @@
       "title": "hallo",
       "description": "dssww",
       "id": 3
+    },
+    {
+      "title": "Actions",
+      "description": "Actions are payloads of information that send data from your application to your store. They are the only source of information for the store. You send them to the store using store.dispatch().",
+      "id": 4
+    },
+    {
+      "title": "Reducers",
+      "description": "Actions describe the fact that something happened, but don't specify how the application's state changes in response. This is the job of reducers.",
+      "id": 5
     }
   ]
 }

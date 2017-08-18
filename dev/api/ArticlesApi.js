@@ -16,6 +16,15 @@ class ArticlesApi {
             return json;
         })
     }
+
+    static getAllArticles() {
+        return fetch('http://localhost:3000/articles').then(response =>
+                   response.json(),
+                   error => console.log('An error occured.', error)
+            ).then(json => {
+                return json;
+        })
+    }
 }
 
 export default ArticlesApi;

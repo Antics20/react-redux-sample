@@ -1,12 +1,8 @@
 import { combineReducers } from 'redux';
 import articles from './addArticle';
 
-const defaultState={
-  addArticle: []
-};
-
-const addReducer = combineReducers({
+const mainReducer = combineReducers({
   articles
 });
 
-export default addReducer;
+export default mainReducer;

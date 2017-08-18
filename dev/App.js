@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
 import UpdateArticle from './components/UpdateArticle';
-import ArticlesList from './components/ArticlesList';
+import DisplayArticlesList from './containers/ArticlesList';
 import AddNewArticle from './containers/AddArticle';
 import './App.css';
 
@@ -16,7 +16,7 @@ export default class App extends Component {
             <UpdateArticle />
           </div>
           <div className="col-md-8">
-            <ArticlesList />
+            <DisplayArticlesList />
           </div>
         </div>
       </div>
