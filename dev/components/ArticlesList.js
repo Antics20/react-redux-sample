@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import ArticlesApi from '../api/ArticlesApi';
-import AddArticle from './AddArticle';
-import { Link } from 'react-router';
+import { getArticle } from '../actions/actionCreators';
+import { addArticle } from '../actions/actionCreators';
 
 class ArticlesList extends Component {
     render() {
+      let title;
+      let description;
         return(
             <div>
                 <div>
@@ -30,11 +32,14 @@ class ArticlesList extends Component {
                     <button type="button" className="btn btn-danger">Delete</button>
                 </div>
                 <div>
-                AddArticle.map(articles=>
-                  <Link to ={'/components'+article.id}>{article.title}</Link>)
-
-</div>
-
+                <h3> Articol from db </h3>
+                <a onClick={ () => {
+                  this.props.addArticle({title: title.value,description: description.value});
+                  title.value = getState();
+                  description.value = getState();
+                  }}
+                className="btn btn-success">Display</a>
+                </div>
             </div>
         );
     }
