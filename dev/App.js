@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
 import UpdateArticle from './components/UpdateArticle';
-import DisplayArticlesList from './containers/ArticlesList';
+import DisplayArticlesList from './containers/DisplayArticlesList';
 import AddNewArticle from './containers/AddArticle';
 import './App.css';
 

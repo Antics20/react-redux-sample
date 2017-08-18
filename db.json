@@ -24,6 +24,11 @@
       "title": "Reducers",
       "description": "Actions describe the fact that something happened, but don't specify how the application's state changes in response. This is the job of reducers.",
       "id": 5
+    },
+    {
+      "title": "Store",
+      "description": "The Store is the object that brings them together. The store has the following responsibilities:\n\nHolds application state;\nAllows access to state via getState();\nAllows state to be updated via dispatch(action);\nRegisters listeners via subscribe(listener);\nHandles unregistering of listeners via the function returned by subscribe(listener).",
+      "id": 6
     }
   ]
 }

@@ -1,4 +1,4 @@
-import { ADD_ARTICLE, ADD_ALL_ARTICLE } from '../actions/actionCreators';
+import { ADD_ARTICLE, GET_ALL_ARTICLES } from '../actions/actionCreators';
 
 const articles = (state = [], action) => {
     switch (action.type) {
@@ -7,7 +7,7 @@ const articles = (state = [], action) => {
                 ...state,
                 action.payload
             ];
-        case 'ADD_ALL_ARTICLE':
+        case 'GET_ALL_ARTICLES':
             return action.payload;
         default:
             return state

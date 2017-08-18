@@ -9,7 +9,6 @@ class ArticlesList extends Component {
                     this.props.articles.map((article) =>
                         <Article article={article}
                                  key={article.id}
-
                         />)
                 }
             </div>
@@ -18,4 +17,3 @@ class ArticlesList extends Component {
 }
 
 export default ArticlesList;
-
