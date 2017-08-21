@@ -3,8 +3,9 @@ import ArticlesApi from '../api/ArticlesApi';
 
 export const ADD_ARTICLE = 'ADD_ARTICLE';
 export const GET_ALL_ARTICLES = 'GET_ALL_ARTICLES';
+export const UPDATE_ARTICLE = 'UPDATE_ARTICLE';
+export const ARTICLE_TO_UPDATE = 'ARTICLE_TO_UPDATE';
 
-//add Article
 export function addArticle(article) {
     return function (dispatch) {
         return ArticlesApi.postArticle(article).then( response => {
@@ -29,12 +30,22 @@ export function fetchAllArticles() {
     }
 }
 
-//update Article
-export function updateArticle(id, title, description) {
+export function updateArticle(article) {
+    return function(dispatch) {
+        return ArticlesApi.updateArticle(article).then( response => {
+            dispatch({
+                type: UPDATE_ARTICLE,
+                payload: response
+            });
+        }).catch(error => {
+            throw(error);
+        });
+    }
+}
+
+export function articleToUpdate(id) {
     return {
-        type: 'UPDATE_ARTICLE',
-        id,
-        title,
-        description
+        type: ARTICLE_TO_UPDATE,
+        id
     }
 }

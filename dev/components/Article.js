@@ -6,7 +6,12 @@ class Article extends Component {
             <div>
                 <h3>{this.props.article.title}</h3>
                 <p>{this.props.article.description}</p>
-                <button className="btn btn-info" type="submit">Update</button>
+                <a onClick={() => {
+                        this.props.articleToUpdate(this.props.article.id)
+                    }}
+                   className="btn btn-info">
+                    Update
+                </a>
                 <button type="button" className="btn btn-danger">Delete</button>
             </div>
         );
