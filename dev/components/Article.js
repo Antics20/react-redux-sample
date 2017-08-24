@@ -13,7 +13,9 @@ class Article extends Component {
                        className="btn btn-info">
                         Update
                     </a>
-                    <button type="button" className="btn btn-danger">Delete</button>
+                    <a onClick={() => {
+                        this.props.deleteArticle(this.props.article)
+                    }} className="btn btn-danger">Delete</a>
                     <i onClick={() => {
                         this.props.likeArticle(this.props.article)
                     }}

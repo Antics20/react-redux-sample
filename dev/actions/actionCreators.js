@@ -6,6 +6,7 @@ export const GET_ALL_ARTICLES = 'GET_ALL_ARTICLES';
 export const UPDATE_ARTICLE = 'UPDATE_ARTICLE';
 export const ARTICLE_TO_UPDATE = 'ARTICLE_TO_UPDATE';
 export const INCREMENT_LIKES = 'INCREMENT_LIKES';
+export const DELETE_ARTICLE = 'DELETE_ARTICLE';
 
 export function addArticle(article) {
     return function (dispatch) {
@@ -57,6 +58,19 @@ export function likeArticle(article) {
             dispatch({
                 type: INCREMENT_LIKES,
                 payload: response
+            });
+        }).catch(error => {
+            throw(error);
+        });
+    }
+}
+
+export function deleteArticle(article) {
+    return function(dispatch) {
+        return ArticlesApi.deleteArticle(article.id).then( () => {
+            dispatch({
+                type: DELETE_ARTICLE,
+                payload: article
             });
         }).catch(error => {
             throw(error);

@@ -1,4 +1,4 @@
-import { ADD_ARTICLE, GET_ALL_ARTICLES, UPDATE_ARTICLE, INCREMENT_LIKES } from '../actions/actionCreators';
+import { ADD_ARTICLE, GET_ALL_ARTICLES, UPDATE_ARTICLE, INCREMENT_LIKES, DELETE_ARTICLE } from '../actions/actionCreators';
 
 const articles = (state = [], action) => {
     switch (action.type) {
@@ -24,6 +24,11 @@ const articles = (state = [], action) => {
                 }
                 return article;
             });
+        case DELETE_ARTICLE:
+            const newState = Object.assign([], state);
+            const indexOfArticleToDelete = state.findIndex(article => { return article.id == action.payload.id });
+            newState.splice(indexOfArticleToDelete, 1);
+            return newState;
         default:
             return state
     }
