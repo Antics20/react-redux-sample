@@ -3,26 +3,44 @@
     {
       "title": "Motivation",
       "description": "As the requirements for JavaScript single-page applications have become increasingly complicated, our code must manage more state than ever before. This state can include server responses and cached data, as well as locally created data that has not yet been persisted to the server. UI state is also increasing in complexity, as we need to manage active routes, selected tabs, spinners, pagination controls, and so on.",
-      "likes": 2,
-      "id": 1
-    },
-    {
-      "title": "Hallo!1",
-      "description": "As the requirements for JavaScript single-page applications have become increasingly complicated, our code must manage more state than ever before. This state can include server responses and cached data, as well as locally created data that has not yet been persisted to the server. UI state is also increasing in complexity, as we need to manage active routes, selected tabs, spinners, pagination controls, and so on.",
-      "likes": 7,
-      "id": 2
-    },
-    {
-      "title": "Three Principles",
-      "description": "1- Single source of truth\n2 -  State is read-only\n3 - Changes are made with pure functions",
-      "likes": 1,
-      "id": 23
+      "likes": 3,
+      "dateAdded": 1503582300825,
+      "id": 25
     },
     {
       "title": "Core Concepts",
-      "description": "Finally, to tie state and actions together, we write a function called a reducer. Again, nothing magical about it—it’s just a function that takes state and action as arguments, and returns the next state of the app. ",
-      "likes": 8,
-      "id": 24
+      "description": "To change something in the state, you need to dispatch an action. An action is a plain JavaScript object (notice how we don’t introduce any magic?) that describes what happened.",
+      "likes": 2,
+      "dateAdded": 1503582336668,
+      "id": 26
+    },
+    {
+      "title": "Three Principles",
+      "description": "This makes it easy to create universal apps, as the state from your server can be serialized and hydrated into the client with no extra coding effort. A single state tree also makes it easier to debug or inspect an application; it also enables you to persist your app's state in development, for a faster development cycle. Some functionality which has been traditionally difficult to implement - Undo/Redo, for example - can suddenly become trivial to implement, if all of your state is stored in a single tree.",
+      "likes": 3,
+      "dateAdded": 1503582339548,
+      "id": 27
+    },
+    {
+      "title": "Actions",
+      "description": "First, let's define some actions.\n\nActions are payloads of information that send data from your application to your store. They are the only source of information for the store. You send them to the store using store.dispatch().",
+      "likes": 5,
+      "dateAdded": 1503582599861,
+      "id": 28
+    },
+    {
+      "title": "Reducers",
+      "description": "Actions describe the fact that something happened, but don't specify how the application's state changes in response. This is the job of reducers.\n\nDesigning the State Shape\n\nIn Redux, all the application state is stored as a single object. It's a good idea to think of its shape before writing any code. What's the minimal representation of your app's state as an object?\n\nFor our todo app, we want to store two different things:\n\nThe currently selected visibility filter;\nThe actual list of todos.\nYou'll often find that you need to store some data, as well as some UI state, in the state tree. This is fine, but try to keep the data separate from the UI state.",
+      "likes": 2,
+      "dateAdded": 1503583154886,
+      "id": 30
+    },
+    {
+      "title": "Store",
+      "description": "In the previous sections, we defined the actions that represent the facts about “what happened” and the reducers that update the state according to those actions.\n\nThe Store is the object that brings them together. The store has the following responsibilities:\n\nHolds application state;\nAllows access to state via getState();\nAllows state to be updated via dispatch(action);\nRegisters listeners via subscribe(listener);\nHandles unregistering of listeners via the function returned by subscribe(listener).",
+      "likes": 6,
+      "dateAdded": 1503583202406,
+      "id": 31
     }
   ]
 }

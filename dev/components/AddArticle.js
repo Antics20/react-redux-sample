@@ -27,7 +27,8 @@ class AddArticle extends Component {
         ({
             title: this.state.title,
             description: this.state.description,
-            likes: 0
+            likes: 0,
+            dateAdded: new Date().getTime()
         });
         this.setState({title: ''});
         this.setState({description: ''});
