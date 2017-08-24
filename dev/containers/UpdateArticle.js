@@ -3,11 +3,6 @@ import { connect } from 'react-redux';
 import * as actionCreators from '../actions/actionCreators';
 import UpdateArticle from '../components/UpdateArticle';
 
-function findArticleById(id, articles) {
-    let article = articles.find((article) => article.id == id);
-    return Object.assign({}, article);
-}
-
 function mapStateToProps(state) {
     return {
         article: findArticleById(state.articleToUpdateId, state.articles),
@@ -17,6 +12,11 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
     return bindActionCreators(actionCreators, dispatch);
+}
+
+function findArticleById(id, articles) {
+    let article = articles.find((article) => article.id == id);
+    return Object.assign({}, article);
 }
 
 const UpdateArticleContainer = connect(mapStateToProps, mapDispatchToProps)(UpdateArticle);

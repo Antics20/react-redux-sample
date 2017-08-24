@@ -1,4 +1,4 @@
-import { ADD_ARTICLE, GET_ALL_ARTICLES, UPDATE_ARTICLE } from '../actions/actionCreators';
+import { ADD_ARTICLE, GET_ALL_ARTICLES, UPDATE_ARTICLE, INCREMENT_LIKES } from '../actions/actionCreators';
 
 const articles = (state = [], action) => {
     switch (action.type) {
@@ -13,6 +13,14 @@ const articles = (state = [], action) => {
             return state.map(article => {
                 if (article.id === action.payload.id) {
                     return action.payload;
+                }
+                return article;
+            });
+        case INCREMENT_LIKES:
+            return state.map(article => {
+                if (article.id === action.id) {
+                    article.likes++;
+                    return article;
                 }
                 return article;
             });

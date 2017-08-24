@@ -10,6 +10,7 @@ class ArticlesList extends Component {
                         <Article article={article}
                                  key={article.id}
                                  articleToUpdate={this.props.articleToUpdate}
+                                 likeArticle={this.props.likeArticle}
                         />)
                 }
             </div>

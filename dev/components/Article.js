@@ -6,13 +6,20 @@ class Article extends Component {
             <div>
                 <h3>{this.props.article.title}</h3>
                 <p>{this.props.article.description}</p>
-                <a onClick={() => {
-                        this.props.articleToUpdate(this.props.article.id)
+                <span className="buttons-line">
+                    <a onClick={() => {
+                            this.props.articleToUpdate(this.props.article.id)
+                        }}
+                       className="btn btn-info">
+                        Update
+                    </a>
+                    <button type="button" className="btn btn-danger">Delete</button>
+                    <i onClick={() => {
+                        this.props.likeArticle(this.props.article)
                     }}
-                   className="btn btn-info">
-                    Update
-                </a>
-                <button type="button" className="btn btn-danger">Delete</button>
+                       className="fa fa-thumbs-o-up fa-2x" aria-hidden="true">
+                    </i>{this.props.article.likes}
+                </span>
             </div>
         );
     }

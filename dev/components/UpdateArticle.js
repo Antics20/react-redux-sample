@@ -57,9 +57,11 @@ class UpdateArticle extends Component {
           </textarea>
           </div>
           <a onClick={() => {
+                isEnabled &&
                 this.props.updateArticle({
                     title: this.state.title,
                     description: this.state.description,
+                    likes: this.state.likes,
                     id: this.props.article.id}).then(() => {this.props.articleToUpdate(null);});
             }}
              disabled={!isEnabled}
