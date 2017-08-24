@@ -8,6 +8,10 @@ class AddArticle extends Component {
             title: '',
             description: ''
         };
+
+        this.saveButton = this.saveButton.bind(this);
+        this.handleDescriptionChange = this.handleDescriptionChange.bind(this);
+        this.handleTitleChange = this.handleTitleChange.bind(this);
     }
 
     handleTitleChange = (event) => {
@@ -17,6 +21,17 @@ class AddArticle extends Component {
     handleDescriptionChange = (event) => {
         this.setState({description: event.target.value });
     };
+
+    saveButton() {
+        this.props.addArticle
+        ({
+            title: this.state.title,
+            description: this.state.description,
+            likes: 0
+        });
+        this.setState({title: ''});
+        this.setState({description: ''});
+    }
 
     render() {
         const isEnabled =
@@ -42,11 +57,7 @@ class AddArticle extends Component {
                         onChange={this.handleDescriptionChange}>
                     </textarea>
                 </div>
-                <a onClick={ () => {
-                    this.props.addArticle({title: this.state.title, description: this.state.description});
-                    this.state.title = '';
-                    this.state.description = '';
-                }}
+                <a onClick={isEnabled && this.saveButton}
                    disabled={!isEnabled}
                    className="btn btn-success">Save
                 </a>

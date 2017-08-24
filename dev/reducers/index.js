@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
-import articles from './addArticle';
+import articles from './articleReducer';
+import articleToUpdateId from './articleToUpdate';
 
 const mainReducer = combineReducers({
-  articles
+  articles,
+  articleToUpdateId
 });
 
 export default mainReducer;

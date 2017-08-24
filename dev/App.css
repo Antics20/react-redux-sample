@@ -9,3 +9,7 @@ label {
 body {
     background-color: #ccc;
 }
+
+.buttons-line > a, i {
+    margin: 10px;
+}

@@ -9,6 +9,8 @@ class ArticlesList extends Component {
                     this.props.articles.map((article) =>
                         <Article article={article}
                                  key={article.id}
+                                 articleToUpdate={this.props.articleToUpdate}
+                                 likeArticle={this.props.likeArticle}
                         />)
                 }
             </div>

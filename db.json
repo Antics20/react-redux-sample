@@ -1,34 +1,133 @@
 {
   "articles": [
     {
+      "title": "json-server",
+      "description": "typicode",
       "id": 1,
-      "title": "json-server1",
-      "description": "typicode"
+      "likes": 1
     },
     {
-      "title": "sedw",
-      "description": "wefw",
+      "title": "Hallo!1",
+      "description": "As the requirements for JavaScript single-page applications have become increasingly complicated, our code must manage more state than ever before. This state can include server responses and cached data, as well as locally created data that has not yet been persisted to the server. UI state is also increasing in complexity, as we need to manage active routes, selected tabs, spinners, pagination controls, and so on.",
+      "likes": 7,
       "id": 2
     },
     {
       "title": "hallo",
       "description": "dssww",
+      "likes": 1,
       "id": 3
     },
     {
       "title": "Actions",
       "description": "Actions are payloads of information that send data from your application to your store. They are the only source of information for the store. You send them to the store using store.dispatch().",
+      "likes": 1,
       "id": 4
     },
     {
       "title": "Reducers",
       "description": "Actions describe the fact that something happened, but don't specify how the application's state changes in response. This is the job of reducers.",
+      "likes": 1,
       "id": 5
     },
     {
       "title": "Store",
       "description": "The Store is the object that brings them together. The store has the following responsibilities:\n\nHolds application state;\nAllows access to state via getState();\nAllows state to be updated via dispatch(action);\nRegisters listeners via subscribe(listener);\nHandles unregistering of listeners via the function returned by subscribe(listener).",
       "id": 6
+    },
+    {
+      "title": "Core Concepts",
+      "description": "To change something in the state, you need to dispatch an action. An action is a plain JavaScript object (notice how we don’t introduce any magic?) that describes what happened. Here are a few example actions:",
+      "id": 7
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": 8
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": 9
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": 10
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": 11
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": 12
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": 13
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": 14
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": 15
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": 16
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": 17
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": 18
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": 19
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": 20
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": 21,
+      "likes": null
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": 22,
+      "likes": null
+    },
+    {
+      "title": "1",
+      "description": "12",
+      "id": 23,
+      "likes": null
+    },
+    {
+      "title": "11",
+      "description": "1",
+      "likes": 7,
+      "id": 24
     }
   ]
 }
