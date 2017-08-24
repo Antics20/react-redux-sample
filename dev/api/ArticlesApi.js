@@ -54,6 +54,16 @@ class ArticlesApi {
                 return json;
             });
     }
+
+    static deleteArticle(id) {
+        return fetch(`http://localhost:3000/articles/${id}`, {
+            method: "DELETE"
+        }).then(response => response.json(),
+                error => console.log('An error occured.', error)
+        ).then(json => {
+                return json;
+            });
+    }
 }
 
 export default ArticlesApi;

@@ -11,6 +11,7 @@ class ArticlesList extends Component {
                                  key={article.id}
                                  articleToUpdate={this.props.articleToUpdate}
                                  likeArticle={this.props.likeArticle}
+                                 deleteArticle={this.props.deleteArticle}
                         />)
                 }
             </div>
