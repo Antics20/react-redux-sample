@@ -13,3 +13,17 @@ body {
 .buttons-line > a, i {
     margin: 10px;
 }
+
+.date {
+    text-align: right;
+    margin-right: 35px;
+}
+
+hr {
+    border-style: inset;
+    border-width: 1px;
+}
+
+.text {
+    color: #ff851b;
+}

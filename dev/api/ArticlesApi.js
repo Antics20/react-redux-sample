@@ -2,7 +2,7 @@ import fetch from 'isomorphic-fetch';
 
 class ArticlesApi {
     static postArticle(article) {
-        return fetch('http://localhost:3000/articles', {
+        return fetch(`http://localhost:3000/articles`, {
             method: "post",
             headers: {
                 'Accept': 'application/json',
@@ -18,7 +18,7 @@ class ArticlesApi {
     }
 
     static getAllArticles() {
-        return fetch('http://localhost:3000/articles').then(response =>
+        return fetch(`http://localhost:3000/articles?_sort=dateAdded&_order=desc`).then(response =>
                    response.json(),
                    error => console.log('An error occured.', error)
             ).then(json => {

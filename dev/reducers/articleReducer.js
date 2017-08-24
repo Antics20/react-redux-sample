@@ -4,15 +4,16 @@ const articles = (state = [], action) => {
     switch (action.type) {
         case ADD_ARTICLE:
             return [
-                ...state,
-                action.payload
+                action.payload,
+                ...state
             ];
         case GET_ALL_ARTICLES:
             return action.payload;
         case UPDATE_ARTICLE:
             return state.map(article => {
                 if (article.id === action.payload.id) {
-                    return action.payload;
+                    let updatedArticle = Object.assign({}, article, action.payload);
+                    return updatedArticle;
                 }
                 return article;
             });
